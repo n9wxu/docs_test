@@ -11,6 +11,9 @@ version = '0.1.0'
 
 # -- General configuration
 
+import subprocess
+subprocess.call('cd .. ; doxygen', shell=True)
+
 extensions = [
     'sphinx.ext.duration',
     'sphinx.ext.doctest',
@@ -26,6 +29,8 @@ intersphinx_mapping = {
 intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
+
+html_extra_path = ['../build/html']
 
 # -- Options for HTML output
 
